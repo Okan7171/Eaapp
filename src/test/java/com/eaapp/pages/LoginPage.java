@@ -24,6 +24,7 @@ public class LoginPage extends BasePage{
  public void loginMethod (){
      String userName= ConfigurationReader.get("userName");
      String passWord= ConfigurationReader.get("passWord");
+     loginButton.click();
      userNameBox.sendKeys(userName);
      passWordBox.sendKeys(passWord);
      loginBox.click();

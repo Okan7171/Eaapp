@@ -34,14 +34,12 @@ public class LoginTest extends TestBase{
     public void logTest() throws InterruptedException {
         loginPage= new LoginPage();
         employeeListPage= new EmployeeListPage();
-        driver.get(ConfigurationReader.get("url"));
-        loginPage.loginButton.click();
+
         Thread.sleep(1000);
         loginPage.loginMethod();
-       Thread.sleep(1000);
-       employeeListPage.employeeListMethod();
-       Thread.sleep(1000);
-      // employeeListPage.createButton.click();
+        Thread.sleep(1000);
+        employeeListPage.employeeListMethod();
+        Thread.sleep(1000);
         employeeListPage.verifyNewEmployee();
         Thread.sleep(1000);
 
